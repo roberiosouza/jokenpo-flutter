@@ -31,9 +31,14 @@ class _JogoState extends State<Jogo> {
                     textAlign: TextAlign.center,
                     style: GoogleFonts.alata(fontSize: 18)),
               ),
-              Image.asset(
-                "images/padrao.png",
-                height: 90,
+              GestureDetector(
+                onTap: () {
+                  print("Imagem clicada");
+                },
+                child: Image.asset(
+                  "images/padrao.png",
+                  height: 90,
+                ),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 32, bottom: 16),
