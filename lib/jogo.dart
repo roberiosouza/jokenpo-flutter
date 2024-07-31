@@ -10,6 +10,16 @@ class Jogo extends StatefulWidget {
   State<Jogo> createState() => _JogoState();
 }
 
+class TituloApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      "Jokenpo",
+      style: GoogleFonts.alata(),
+    );
+  }
+}
+
 class _JogoState extends State<Jogo> {
   var _resultado = "Escolha uma opção abaixo.";
   var _imagemApp = AssetImage("images/padrao.png");
@@ -106,10 +116,7 @@ class _JogoState extends State<Jogo> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
-            "Jokenpo",
-            style: GoogleFonts.alata(),
-          ),
+          title: TituloApp(),
           backgroundColor: Colors.blueAccent,
         ),
         body: Container(
